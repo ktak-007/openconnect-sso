@@ -1,5 +1,5 @@
 { sources ? import ./sources.nix
-, pkgs ? import <nixpkgs> {
+, pkgs ? import sources.nixpkgs {
     overlays = [ (import "${sources.poetry2nix}/overlay.nix") ];
   }
 }:
